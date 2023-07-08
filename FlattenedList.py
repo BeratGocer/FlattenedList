@@ -15,3 +15,21 @@ def Duzenleme(Liste):
 
 Cikti = Duzenleme(Liste)
 print(Cikti)
+
+Liste2 = [[1, 2], [3, 4], [5, 6, 7]]
+
+
+def Duzenleme2(Liste2):
+    DuzenlenmisListe2 = []
+
+    for i in Liste2[::-1]:
+        if isinstance(i, list):
+            DuzenlenmisListe2.append(Duzenleme2(i))
+        else:
+            DuzenlenmisListe2.append(i)
+
+    return DuzenlenmisListe2
+
+
+Cikti2 = Duzenleme2(Liste2)
+print(Cikti2)
